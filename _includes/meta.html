@@ -7,8 +7,7 @@
 <title>{{ title }}</title>
 <meta name="description" content="{{ description }}">
 
-<!-- *** social meta *** -->
-<!-- facebook -->
+<!-- Facebook -->
 <meta property="og:type" content="website" />
 <meta property="og:image" content="{{ site.url }}{{ site.fb_share_image }}" />
 <meta property="og:image:width" content="1024" />
@@ -20,7 +19,7 @@
 <meta property="og:title" content="{{ site.share_title }}" />
 <meta property="og:description" content="{{ site.share_description }}" />
 
-<!-- twitter -->
+<!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="{{ site.author.twitter }}">
 <meta name="twitter:title" content="{{ site.share_title }}">
@@ -29,14 +28,6 @@
 <meta name="twitter:domain" content="{{ site.url | remove:'http://' | remove:'https://' }}" />
 <meta name="twitter:account_id" content="{{ site.author.twitterid }}" />
 
-<!-- google+ -->
-<meta itemprop="name" content="{{ site.share_title }}" />
-<meta itemprop="description" content="{{ site.share_description }}" />
-<meta itemprop="image" content="{{ site.url }}{{ site.twitter_share_image }}" />
-<!-- /*** social meta *** -->
-
-<link rel="publisher" href="https://plus.google.com/{{ site.author.googleid }}">
-
 {% if favicon != '' %}
 <link rel="shortcut icon" href="{{ favicon }}">
 {% endif %}
@@ -44,7 +35,7 @@
 <link rel="author" content="humans.txt" />
 <link rel="stylesheet" href="{{ pathlead }}style.css">
 
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:600" rel="stylesheet" type="text/css">
 
 <link rel="apple-/touch-icon-precomposed" href="{{ pathlead }}touch-icon-iphone.png"/>
 <link rel="apple-/touch-icon-precomposed" sizes="76x76" href="{{ pathlead }}touch-icon-ipad.png"/>
