@@ -1,0 +1,52 @@
+{% capture title %}{% if page.title %}{{ page.title }} |{% endif %}{{ site.title }}{% endcapture %}
+{% capture description %}{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}{% endcapture %}
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>{{ title }}</title>
+<meta name="description" content="{{ description }}">
+
+<!-- *** social meta *** -->
+<!-- facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:image" content="{{ site.url }}{{ site.fb_share_image }}" />
+<meta property="og:image:width" content="1024" />
+<meta property="og:image:height" content="512" />
+<meta property="og:site_name" content="{{ site.name }}" />
+<meta property="og:determiner" content="" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:locale:alternate" content="en_GB" />
+<meta property="og:title" content="{{ site.share_title }}" />
+<meta property="og:description" content="{{ site.share_description }}" />
+
+<!-- twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="{{ site.author.twitter }}">
+<meta name="twitter:title" content="{{ site.share_title }}">
+<meta name="twitter:description" content="{{ site.share_description }}"/>
+<meta name="twitter:image:src" content="{{ site.url }}{{ site.twitter_share_image }}" />
+<meta name="twitter:domain" content="{{ site.url | remove:'http://' | remove:'https://' }}" />
+<meta name="twitter:account_id" content="{{ site.author.twitterid }}" />
+
+<!-- google+ -->
+<meta itemprop="name" content="{{ site.share_title }}" />
+<meta itemprop="description" content="{{ site.share_description }}" />
+<meta itemprop="image" content="{{ site.url }}{{ site.twitter_share_image }}" />
+<!-- /*** social meta *** -->
+
+<link rel="publisher" href="https://plus.google.com/{{ site.author.googleid }}">
+
+{% if favicon != '' %}
+<link rel="shortcut icon" href="{{ favicon }}">
+{% endif %}
+
+<link rel="author" content="humans.txt" />
+<link rel="stylesheet" href="{{ pathlead }}style.css">
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300" rel="stylesheet" type="text/css">
+
+<link rel="apple-/touch-icon-precomposed" href="{{ pathlead }}touch-icon-iphone.png"/>
+<link rel="apple-/touch-icon-precomposed" sizes="76x76" href="{{ pathlead }}touch-icon-ipad.png"/>
+<link rel="apple-/touch-icon-precomposed" sizes="120x120" href="{{ pathlead }}touch-icon-iphone-retina.png"/>
+<link rel="apple-/touch-icon-precomposed" sizes="152x152" href="{{ pathlead }}touch-icon-ipad-retina.png"/>

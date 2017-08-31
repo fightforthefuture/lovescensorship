@@ -1,0 +1,22 @@
+title: 'Marsha Blackburn Wants Censorship'
+url: https://www.marshawantscensorship.org/
+share_title: ""
+share_description: ""
+fb_share_image: ""
+twitter_share_image: ""
+tweet: ""
+
+# Build settings
+markdown: kramdown
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/

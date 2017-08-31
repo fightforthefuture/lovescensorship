@@ -1,0 +1,48 @@
+.hidden {
+  display: none;
+}
+
+.invisible {
+  opacity: 0;
+}
+
+.fade {
+  transition: opacity 1s;
+}
+
+body {
+  background: linear-gradient(0, $lightGrey, $darkGrey);
+  color: $white;
+  font-family: $body-font;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $heading-font;
+  font-weight: bold;
+  margin: 0px auto;
+}
+
+h1 {
+  font-size: 90px;
+
+  em {
+    color: $red;
+    text-decoration: underline;
+  } 
+}
+
+form {
+  input {
+    border: none;
+    border-radius: 0.2rem;
+  }
+
+  input[type="submit"] {
+    color: $white;
+    background: $red;
+  }
+}
+
+footer {
+  background-color: $black;
+}
