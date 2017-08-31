@@ -47,7 +47,7 @@
     xhr.addEventListener('error', onError);
     xhr.addEventListener('load', function onLoad(e) {
       if (e && 200 <= e.code < 300) {
-        window.location = "/thanks.html";
+        window.location = "/thanks";
       } else {
         onError(e);
       }
