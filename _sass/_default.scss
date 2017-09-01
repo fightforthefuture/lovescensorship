@@ -12,18 +12,41 @@
 
 body {
   background: linear-gradient(0, $lightGrey, $darkGrey);
-  color: $white;
+  color: #9c9c9c;
   font-family: $body-font;
+  font-size: 1.4rem;
+  text-align: center;
+
+  > main {
+    max-width: 56rem;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  section {
+    max-width: 44rem;
+    margin: 0 auto;
+  }
+}
+
+strong {
+  color: $white;
+  font-weight: bold;
+}
+
+a {
+  color: $white;
 }
 
 h1, h2, h3, h4, h5, h6 {
+  color: $white;
   font-family: $heading-font;
   font-weight: bold;
-  margin: 0px auto;
+  margin: 0 auto;
 }
 
 h1 {
-  font-size: 90px;
+  font-size: 2.8rem;
 
   em {
     color: $red;
@@ -31,18 +54,101 @@ h1 {
   } 
 }
 
-form {
-  input {
-    border: none;
-    border-radius: 0.2rem;
-  }
+h2 {
+  font-size: 2.4rem;
+}
 
-  input[type="submit"] {
-    color: $white;
-    background: $red;
-  }
+input {
+  border: none;
+  border-radius: $border-radius;
+}
+
+input[type="submit"] {
+  color: $white;
+  background: $red;
 }
 
 footer {
-  background-color: $black;
+  margin-top: 2rem;
+  color: $white;
+
+  .logo {
+    max-width: $footer-width;
+    margin: 0 auto;
+    padding: 1rem 0;
+    background-color: #1a1b1c;
+    border-radius: $border-radius;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+
+    img {
+      max-width: 18rem;
+    }
+  }
+
+  > main {
+    margin-top: -3rem;
+    padding: 3rem 0 1rem;
+    background-color: $black;
+
+    .social {
+      max-width: $footer-width;
+      margin: 2rem auto;
+      display: flex;
+
+      a {
+        flex: 1;
+
+        button {
+          width: 96%;
+          padding: 0.6rem;
+          border: none;
+          border-radius: 0.3rem;
+          color: $white;
+          font-size: 0.8rem;
+          font-weight: bold;
+          text-transform: uppercase;
+          text-align: center;
+
+          &:hover {
+            cursor: pointer;
+          }
+
+          &.facebook {
+            background-color: $facebookBlue;
+          }
+
+          &.twitter {
+            background-color: $twitterBlue;
+          }
+
+          svg {
+            max-width: 1.6rem;
+            max-height: 1.6rem;
+            margin: -0.2rem 0.4rem 0 0;
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+
+    hr {
+      max-width: $footer-width;
+      border: 1px solid #2b2c2e;
+    }
+
+    .contact {
+      margin: 2rem auto;
+      font-size: 0.8rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-align: center;
+
+      a {
+        color: #858585;
+      }
+    }
+  }
 }
