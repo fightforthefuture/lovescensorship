@@ -1,32 +1,36 @@
-<section id="petition">
-  <div class="loader">
-    <img src="images/loader.gif" alt="Loading..." />
+<section class="petition">
+  <div class="left">
+    <img src="{{ include.image }}" alt="{{ include.caption }}" />
   </div>
 
-  <form method="post" action="https://queue.fightforthefuture.org/action" accept-charset="UTF-8">
-    <input type="text" name="member[first_name]" placeholder="Name" title="Name" autocomplete="name" required>
-    <input type="email" name="member[email]" placeholder="Email" title="Email" required>
-    <input type="text" name="member[postcode]" placeholder="ZIP" title="ZIP" required>
+  <div class="right">
+    <h3>{{ include.heading }}</h3>
+    <p>{{ include.subhead }}</p>
 
-    <input type="submit" value="Add Your Name" />
-
-    <div class="disclaimer">
-      <p></p>
-      <p><a href="https://www.battleforthenet.com/privacy/" target="_blank">Privacy Policy</a></p>
+    <div class="loader fade invisible hidden">
+      <img src="images/loader.gif" alt="Loading..." />
     </div>
 
-    <!-- Mothership Honeypot Bot Defense -->
-    <input class="hidden" type="checkbox" checked="checked" name="hp_enabled" />
-    <input class="hidden" type="checkbox" name="hp_disabled" />
-    <input class="hidden" type="text" name="guard" />
+    <form method="post" action="https://queue.fightforthefuture.org/action" accept-charset="UTF-8">
+      <input type="text" name="member[first_name]" placeholder="Name" title="Name" autocomplete="name" required>
+      <input type="email" name="member[email]" placeholder="Email" title="Email" required>
+      <input type="text" name="member[postcode]" placeholder="ZIP" title="ZIP" required>
 
-    <!-- Mothership -->
-    <input type="hidden" name="contact_congress" value="0"/>
+      <input type="submit" value="Add Your Name" />
 
-    <!-- Action Network -->
-    <input type="hidden" name="an_tags" value="[&quot;net-neutrality&quot;]"/>
-    <input type="hidden" name="an_petition_id" value="5de97f0d-fd08-4b3a-904d-f808e380dbd6"/>
-  </form>
+      <!-- Mothership Honeypot Bot Defense -->
+      <input class="hidden" type="checkbox" checked="checked" name="hp_enabled" />
+      <input class="hidden" type="checkbox" name="hp_disabled" />
+      <input class="hidden" type="text" name="guard" />
+
+      <!-- Mothership -->
+      <input type="hidden" name="contact_congress" value="0"/>
+
+      <!-- Action Network -->
+      <input type="hidden" name="an_tags" value="[&quot;net-neutrality&quot;]"/>
+      <input type="hidden" name="an_petition_id" value="5de97f0d-fd08-4b3a-904d-f808e380dbd6"/>
+    </form>
+  </div>
 </section>
 
 <script src="js/petition.js" type="text/javascript" async></script>
