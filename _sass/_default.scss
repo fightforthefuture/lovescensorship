@@ -11,8 +11,8 @@
 }
 
 body {
-  background: linear-gradient(180deg, $lightGrey, $darkGrey 30rem);
-  color: #9c9c9c;
+  background: linear-gradient(180deg, $darkGrey, $darkerGrey 30rem);
+  color: $lightGrey;
   font-family: $body-font;
   font-size: 1.2rem;
   line-height: 1.6;
@@ -93,7 +93,7 @@ input[type="submit"] {
 .petition {
   margin-bottom: 8rem;
   display: flex;
-  color: white;
+  color: $white;
   text-align: left;
 
   .left {
@@ -133,9 +133,10 @@ input[type="submit"] {
 button {
   width: 96%;
   padding: 0.8rem;
+  background-color: $grey;
+  color: $white;
   border: none;
   border-radius: 0.3rem;
-  color: $white;
   font-size: 0.8rem;
   font-weight: bold;
   text-transform: uppercase;

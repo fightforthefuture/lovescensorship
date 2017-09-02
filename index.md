@@ -4,7 +4,7 @@ layout: default
 
 # *Marsha Blackburn* sold off our Internet privacy. Now she wants censorship.
 
-{% include petition.html heading="Tell Marsha Blackburn:" subhead="You can’t hide from your constituents. We can all see your corruption. I’ll never vote for you if you continue to support the FCC’s attack on free speech and the Internet." image="images/marshablackburn.png" caption="Marsha Blackburn" %}
+{% include petition.html header="Tell Marsha Blackburn:" body="You can’t hide from your constituents. We can all see your corruption. I’ll never vote for you if you continue to support the FCC’s attack on free speech and the Internet." image="images/marshablackburn.png" caption="Marsha Blackburn" %}
 
 ## Marsha Blackburn bills herself as a conservative, but when it comes to free speech she sides with globalists and liberals.
 
@@ -13,3 +13,5 @@ Blackburn has [taken](http://www.vocativ.com/415350/house-rep-pushing-to-set-bac
 ## This is a title of this section that can go up to maybe two lines of text.
 
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+
+{% include modal.html header="Thanks. Now can you share?" body="We need everyone to know how corrupt Marsha Blackburn is so they don’t get fooled." src="thanks.md" %}
