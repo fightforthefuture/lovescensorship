@@ -130,6 +130,37 @@ input[type="submit"] {
   }
 }
 
+button {
+  width: 96%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 0.3rem;
+  color: $white;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.facebook {
+    background-color: $facebookBlue;
+  }
+
+  &.twitter {
+    background-color: $twitterBlue;
+  }
+
+  svg {
+    max-width: 1.6rem;
+    max-height: 1.6rem;
+    margin: -0.2rem 0.4rem 0 0;
+    vertical-align: middle;
+  }
+}
+
 footer {
   margin-top: 2rem;
   color: $white;
@@ -162,37 +193,6 @@ footer {
 
       a {
         flex: 1;
-
-        button {
-          width: 96%;
-          padding: 0.8rem;
-          border: none;
-          border-radius: 0.3rem;
-          color: $white;
-          font-size: 0.8rem;
-          font-weight: bold;
-          text-transform: uppercase;
-          text-align: center;
-
-          &:hover {
-            cursor: pointer;
-          }
-
-          &.facebook {
-            background-color: $facebookBlue;
-          }
-
-          &.twitter {
-            background-color: $twitterBlue;
-          }
-
-          svg {
-            max-width: 1.6rem;
-            max-height: 1.6rem;
-            margin: -0.2rem 0.4rem 0 0;
-            vertical-align: middle;
-          }
-        }
       }
     }
 
