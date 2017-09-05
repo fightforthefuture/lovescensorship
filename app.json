@@ -1,0 +1,13 @@
+{
+  "env": {
+    "NGINX_WAIT_ENABLED": "0"
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/ruby"
+    },
+    {
+      "url": "https://github.com/agriffis/nginx-buildpack"
+    }
+  ]
+}

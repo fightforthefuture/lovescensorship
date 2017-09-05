@@ -4,7 +4,7 @@ layout: default
 
 # *Marsha Blackburn* sold off our Internet privacy. Now she wants censorship.
 
-{% include petition.html header="Tell Marsha Blackburn:" body="You can’t hide from your constituents. We can all see your corruption. I’ll never vote for you if you continue to support the FCC’s attack on free speech and the Internet." image="images/marshablackburn.png" caption="Marsha Blackburn" %}
+{% include petition.html header="Tell Marsha Blackburn:" body="You can’t hide from your constituents. We can all see your corruption. I’ll never vote for you if you continue to support the FCC’s attack on free speech and the Internet." image="/images/marshablackburn.png" caption="Marsha Blackburn" %}
 
 ## Marsha Blackburn bills herself as a conservative, but when it comes to free speech she sides with globalists and liberals.
 

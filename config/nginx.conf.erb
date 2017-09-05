@@ -1,0 +1,47 @@
+daemon off;
+worker_processes <%= ENV['NGINX_WORKERS'] %>;
+pid /app/nginx.pid;
+error_log stderr;
+
+events {
+    use epoll;
+    accept_mutex on;
+    worker_connections 1024;
+}
+
+http {
+    <% if ENV['NGINX_GZIP_ENABLED'] == '1' %>
+    gzip on;
+    gzip_disable msie6;
+    gzip_min_length 512;
+    gzip_proxied <%= ENV['NGINX_GZIP_PROXIED'] %>;
+    gzip_types <%= ENV['NGINX_GZIP_TYPES'] %>;
+    <% end %>
+
+    server_tokens off;
+
+    log_format l2met 'measure#nginx.service=$request_time request_id=$http_x_request_id';
+    access_log error l2met;
+
+    include mime.types;
+    default_type application/octet-stream;
+    sendfile on;
+
+    server {
+        listen <%= ENV['NGINX_LISTEN'] %>;
+        server_name ~^(www\.)?(?<domain>.+)$;
+        root <%= ENV['HOME'] %>/_site;
+        keepalive_timeout 5;
+
+        error_page 404 /404/;
+
+        location / {
+          root _site/$domain;
+          try_files $uri $uri/index.html $uri.html @fallback;
+        }
+
+        location @fallback {
+          try_files $uri $uri/index.html $uri.html =404;
+        }
+    }
+}
