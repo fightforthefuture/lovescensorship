@@ -10,6 +10,48 @@
   transition: opacity 0.3s;
 }
 
+html {
+  height: 100%;
+  background-color: $black;
+}
+
+strong {
+  color: $white;
+  font-weight: bold;
+}
+
+a {
+  color: $white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $white;
+  font-family: $heading-font;
+  font-weight: bold;
+  margin: 0 auto;
+  line-height: 1.2;
+  letter-spacing: 0.1rem;
+}
+
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 6rem;
+
+  em {
+    color: $red;
+    text-decoration: underline;
+  } 
+}
+
+h2 {
+  font-size: 2.2rem;
+  margin: 1.5rem auto;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
 body {
   background: linear-gradient(180deg, $dark-grey, $darker-grey 30rem);
   color: $light-grey;
@@ -29,7 +71,7 @@ body {
   }
 
   > footer {
-    margin-top: 2rem;
+    margin-top: 4rem;
     color: $white;
 
     .logo {
@@ -88,41 +130,15 @@ body {
   }
 }
 
-strong {
-  color: $white;
-  font-weight: bold;
-}
-
-a {
-  color: $white;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  color: $white;
-  font-family: $heading-font;
-  font-weight: bold;
-  margin: 0 auto;
-  line-height: 1.2;
-  letter-spacing: 0.1rem;
-}
-
-h1 {
-  font-size: 2.8rem;
-  margin-bottom: 6rem;
-
-  em {
-    color: $red;
-    text-decoration: underline;
-  } 
-}
-
-h2 {
-  font-size: 2.2rem;
-  margin: 1.5rem auto;
-}
-
-h3 {
-  font-size: 1.8rem;
+body.error {
+  h1 {
+    font-size: 4rem;
+    margin-bottom: 0;
+  }
+  
+  p {
+    margin-bottom: 0;
+  }
 }
 
 input {
