@@ -201,11 +201,11 @@ button {
     cursor: pointer;
   }
 
-  &.facebook {
+  .facebook & {
     background-color: $facebook-blue;
   }
 
-  &.twitter {
+  .twitter & {
     background-color: $twitter-blue;
   }
 
