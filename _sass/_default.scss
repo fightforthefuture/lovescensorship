@@ -1,5 +1,5 @@
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .invisible {
@@ -7,7 +7,7 @@
 }
 
 .fade {
-  transition: opacity 1s;
+  transition: opacity 0.3s;
 }
 
 body {
@@ -21,7 +21,7 @@ body {
   > main {
     max-width: 60rem;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 4rem 1rem 0;
 
     > p {
       margin-bottom: 6rem;
@@ -108,7 +108,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 2.8rem;
-  margin: 4rem auto 6rem;
+  margin-bottom: 6rem;
 
   em {
     color: $red;
@@ -195,6 +195,7 @@ button {
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
+  line-height: 2;
 
   &:hover {
     cursor: pointer;
@@ -216,3 +217,53 @@ button {
   }
 }
 
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  background: $transparent-black;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  display: table;
+
+  .cell {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .modal {
+    main {
+      border-radius: $border-radius $border-radius 0 0;
+      background-color: $near-black;
+      padding: 2rem;
+
+      h2 {
+        margin-top: 0;
+      }
+    }
+
+    footer {
+      background-color: #2a2a2a;
+      border-radius: 0 0 $border-radius $border-radius;
+      padding: 2rem;
+
+      .social {
+        display: flex;
+        flex-wrap: nowrap;
+
+        a {
+          flex: 3;
+
+          &:last-child {
+            flex: 2;
+          }
+        }
+      }
+    }
+  }
+}
