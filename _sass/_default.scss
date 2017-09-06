@@ -11,8 +11,8 @@
 }
 
 body {
-  background: linear-gradient(180deg, $darkGrey, $darkerGrey 30rem);
-  color: $lightGrey;
+  background: linear-gradient(180deg, $dark-grey, $darker-grey 30rem);
+  color: $light-grey;
   font-family: $body-font;
   font-size: 1.2rem;
   line-height: 1.6;
@@ -147,11 +147,11 @@ button {
   }
 
   &.facebook {
-    background-color: $facebookBlue;
+    background-color: $facebook-blue;
   }
 
   &.twitter {
-    background-color: $twitterBlue;
+    background-color: $twitter-blue;
   }
 
   svg {
