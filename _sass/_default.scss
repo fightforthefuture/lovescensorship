@@ -158,6 +158,10 @@ input[type="submit"] {
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   padding: 1.2rem;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .petition {
@@ -183,6 +187,11 @@ input[type="submit"] {
   p {
     margin: 1rem 0;
     font-size: 1.1rem;
+  }
+
+  p.message {
+    color: $red;
+    font-size: 0.8rem;
   }
 
   form {

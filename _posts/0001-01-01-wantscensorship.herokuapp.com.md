@@ -13,5 +13,3 @@ Blackburn has [taken](http://www.vocativ.com/415350/house-rep-pushing-to-set-bac
 ## This is a title of this section that can go up to maybe two lines of text.
 
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-
-{% include modal.html header="Thanks. Now can you share?" body="We need everyone to know how corrupt Marsha Blackburn is so they don’t get fooled." src="thanks.md" %}

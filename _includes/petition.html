@@ -7,10 +7,6 @@
     <h3>{{ include.header }}</h3>
     <p>{{ include.body }}</p>
 
-    <div class="loader fade invisible hidden">
-      <img src="/images/loader.gif" alt="Loading..." />
-    </div>
-
     <form method="post" action="https://queue.fightforthefuture.org/action" accept-charset="UTF-8">
       <input type="text" name="member[first_name]" placeholder="Name" title="Name" autocomplete="name" required>
       <input type="email" name="member[email]" placeholder="Email" title="Email" required>
@@ -30,7 +26,11 @@
       <input type="hidden" name="an_tags" value="[&quot;net-neutrality&quot;]"/>
       <input type="hidden" name="an_petition_id" value="5de97f0d-fd08-4b3a-904d-f808e380dbd6"/>
     </form>
+
+    <p class="message fade invisible hidden"></p>
   </div>
 </section>
+
+{% include modal.html id="thanks" header="Thanks. Now can you share?" body="We need everyone to know how corrupt Marsha Blackburn is so they don’t get fooled." %}
 
 <script src="/js/petition.js" type="text/javascript" async></script>
