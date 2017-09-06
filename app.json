@@ -1,6 +1,7 @@
 {
   "env": {
-    "NGINX_WAIT_ENABLED": "0"
+    "NGINX_WAIT_ENABLED": "0",
+    "NGINX_GZIP_ENABLED": "1"
   },
   "buildpacks": [
     {
