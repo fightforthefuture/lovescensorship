@@ -1,14 +1,14 @@
-{% capture thanks_body %}We need everyone to know how corrupt {{ page.politician }} is so they don’t get fooled.{% endcapture %}
+{% capture thanks_body %}We need everyone to know how corrupt {{ page.politician.name }} is so they don’t get fooled.{% endcapture %}
 
 <section id="petition" class="petition">
   <div class="left">
     <aside>
-      <div class="politician" style="background-image: url({{ page.image }})"></div>
+      <div class="politician" style="background-image: url({{ page.politician.image }})"></div>
     </aside>
   </div>
 
   <div class="right">
-    <h3>Tell {{ page.politician }}:</h3>
+    <h3>Tell {{ page.politician.name }}:</h3>
     <p>You can't hide from your constituents. We can all see your corruption. I'll never vote for you if you continue to support the FCC's attack on free speech and the Internet.</p>
 
     <form method="post" action="https://queue.fightforthefuture.org/action" accept-charset="UTF-8">

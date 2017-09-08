@@ -1,10 +1,13 @@
 ---
 layout: default
-politician: Marsha Blackburn
+domain: https://marshablackburn.info
+politician:
+  name: Marsha Blackburn
+  image: /images/marshablackburn.jpg
+  twitter: '@MarshaBlackburn'
 pronoun:
   subject: she
-  possessive: her
-image: /images/marshablackburn.jpg
+  object: her
 taken:
   link: http://www.vocativ.com/415350/house-rep-pushing-to-set-back-online-privacy-rakes-in-industry-funds/
 amount: $700,000

@@ -1,10 +1,13 @@
 ---
 layout: default
-politician: Greg Walden
+domain: https://repgregwalden.info
+politician:
+  name: Greg Walden
+  image: /images/gregwalden.jpg
+  twitter: '@repgregwalden'
 pronoun:
   subject: he
-  possessive: him
-image: /images/gregwalden.jpg
+  object: him
 taken:
   link: https://www.opensecrets.org/members-of-congress/contributors?cid=N00007690&cycle=CAREER&type=I
 amount: $400,000

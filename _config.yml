@@ -1,10 +1,13 @@
-title: 'Marsha Blackburn Wants Censorship'
-url: https://www.marshawantscensorship.org/
-share_title: "Marsha Blackburn is a fake conservative who loves Internet censorship"
-share_description: "She’s taken hundreds of thousands from big media companies to sell us out."
-fb_share_image: "images/marshablackburn.jpg"
-twitter_share_image: "images/marshablackburn.jpg"
-tweet: "Exposed: @MarshaBlackburn is a fake conservative who loves online censorship. Real conservatives should vote her out!"
+title: ' Loves Censorship'
+share_title: ' is a fake conservative who loves Internet censorship'
+share_description: "'s taken hundreds of thousands from big media companies to sell us out."
+tweet:
+  prefix: 'Exposed: '
+  postfix: ' is a fake conservative who hates free speech and loves online censorship and surveillance'
+
+author:
+  twitter: fightfortheftr
+  twitter_id: 382376904
 
 # Build settings
 markdown: kramdown
