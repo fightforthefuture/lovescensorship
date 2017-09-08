@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.com/fightforthefuture/marshawantscensorship.svg?token=Phdq58g7NsfstW6gyeYW&branch=master)](https://travis-ci.com/fightforthefuture/marshawantscensorship)
+[![Build Status](https://travis-ci.com/fightforthefuture/lovescensorship.svg?token=Phdq58g7NsfstW6gyeYW&branch=master)](https://travis-ci.com/fightforthefuture/lovescensorship)
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/fightforthefuture/marshawantscensorship)
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/fightforthefuture/lovescensorship)
 
 This project uses [NGINX](https://www.nginx.com/) in front of [Jekyll](https://jekyllrb.com/) to serve any number of single-page static sites (with content configurable in [Markdown](https://daringfireball.net/projects/markdown/syntax)) from one or more shared templates.
 
