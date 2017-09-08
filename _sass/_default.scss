@@ -110,7 +110,7 @@ body {
         border: 1px solid #2b2c2e;
       }
 
-      .contact, .disclaimer {
+      .contact {
         margin: 2rem auto;
         font-size: 0.8rem;
         font-weight: bold;
@@ -165,7 +165,7 @@ input[type="submit"] {
 }
 
 .petition {
-  margin-bottom: 8rem;
+  margin-bottom: 6rem;
   display: flex;
   color: $white;
   text-align: left;
@@ -210,7 +210,12 @@ input[type="submit"] {
     font-size: 1.08rem;
   }
 
-  p.message {
+  .disclaimer {
+    color: $light-grey;
+    font-size: 0.8rem;
+  }
+
+  .message {
     color: $red;
     font-size: 0.8rem;
   }
