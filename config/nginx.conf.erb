@@ -4,44 +4,58 @@ pid /app/nginx.pid;
 error_log stderr;
 
 events {
-    use epoll;
-    accept_mutex on;
-    worker_connections 1024;
+  use epoll;
+  accept_mutex on;
+  worker_connections 1024;
 }
 
 http {
-    <% if ENV['NGINX_GZIP_ENABLED'] == '1' %>
-    gzip on;
-    gzip_disable msie6;
-    gzip_min_length 512;
-    gzip_proxied <%= ENV['NGINX_GZIP_PROXIED'] %>;
-    gzip_types <%= ENV['NGINX_GZIP_TYPES'] %>;
-    <% end %>
+  <% if ENV['NGINX_GZIP_ENABLED'] == '1' %>
+  gzip on;
+  gzip_disable msie6;
+  gzip_min_length 512;
+  gzip_proxied <%= ENV['NGINX_GZIP_PROXIED'] %>;
+  gzip_types <%= ENV['NGINX_GZIP_TYPES'] %>;
+  <% end %>
 
-    server_tokens off;
+  server_tokens off;
 
-    log_format l2met 'measure#nginx.service=$request_time request_id=$http_x_request_id';
-    access_log error l2met;
+  log_format l2met 'measure#nginx.service=$request_time request_id=$http_x_request_id';
+  access_log error l2met;
 
-    include mime.types;
-    default_type application/octet-stream;
-    sendfile on;
+  include mime.types;
+  default_type application/octet-stream;
+  sendfile on;
 
-    server {
-        listen <%= ENV['NGINX_LISTEN'] %>;
-        server_name ~^(www\.)?(?<domain>.+)$;
-        root <%= ENV['HOME'] %>/_site;
-        keepalive_timeout 5;
+  # Redirect www to naked apex domain
+  server {
+    listen <%= ENV['NGINX_LISTEN'] %>;
+    server_name ~^www\.(?<domain>.+)$;
+    return 301 https://$domain$request_uri;
+  }
 
-        error_page 404 /404/;
+  server {
+    listen <%= ENV['NGINX_LISTEN'] %>;
+    server_name ~^(www\.)?(?<domain>.+)$;
+    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
 
-        location / {
-          root _site/$domain;
-          try_files $uri $uri/index.html $uri.html @fallback;
-        }
-
-        location @fallback {
-          try_files $uri $uri/index.html $uri.html =404;
-        }
+    # Check Heroku headers to redirect http to https
+    if ($http_x_forwarded_proto != 'https') {
+      return 301 https://$domain$request_uri;
     }
+
+    root <%= ENV['HOME'] %>/_site;
+    keepalive_timeout 5;
+
+    error_page 404 /404/;
+
+    location / {
+      root _site/$domain;
+      try_files $uri $uri/index.html $uri.html @fallback;
+    }
+
+    location @fallback {
+      try_files $uri $uri/index.html $uri.html =404;
+    }
+  }
 }
