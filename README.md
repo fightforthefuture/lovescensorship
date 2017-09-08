@@ -14,7 +14,7 @@ This project uses [NGINX](https://www.nginx.com/) in front of [Jekyll](https://j
 
 # Adding new domain names
 
-- In the Heroku dashboard, navigate to this app, open the `Settings` tab add two new custom domains under `Domains and certificates` - the naked apex domain like `example.com` and `www.example.com`. NGINX will 301 redirect all traffic to HTTPS and the naked apex domain. Note that Heroku's automatically managed SSL certificates won't work with CloudFlare](https://kb.heroku.com/how-can-i-use-automated-certificate-management-with-cloudflare).
+- In the Heroku dashboard, navigate to this app, open the `Settings` tab add two new custom domains under `Domains and certificates` - the naked apex domain like `example.com` and `www.example.com`. NGINX will 301 redirect all traffic to HTTPS and the naked apex domain. Note that Heroku's automatically managed SSL certificates [won't work with CloudFlare](https://kb.heroku.com/how-can-i-use-automated-certificate-management-with-cloudflare).
 - In your DNS provider, create a `CNAME` record for the apex domain and `www` subdomain and point each at the respective `DNS Target` shown in Heroku.
 
 # Notes
