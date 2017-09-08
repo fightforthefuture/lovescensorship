@@ -7,11 +7,13 @@
   </div>
 
   <main>
+    {% if page.layout != 'error' %}
     <div class="share">
       {% include share.html %}
     </div>
 
     <hr>
+    {% endif %}
 
     <p class="contact">
       Inquiries: <a href="mailto:press@fightforthefuture.org">press@fightforthefuture.org</a>
