@@ -5,6 +5,12 @@
 </head>
 <body class="{{ page.classes }}">
   <main>
+    <h1><em>{{ page.politician }}</em> sold off our Internet privacy. Now {{ page.pronoun.subject }} wants censorship.</h1>
+
+    {% include petition.html %}
+
+    <p>{{ page.politician }} has <a href="{{ page.taken.link }}" target="_blank">taken</a> nearly {{ page.amount }} in campaign contributions from giant mainstream media and telecom companies like Comcast -- who own MSNBC -- in exchange for <strong>supporting</strong> their policies <a href="https://www.eff.org/deeplinks/2017/06/attack-net-neutrality-attack-free-speech" target="_blank">pushing</a> for more Internet censorship, price gouging for consumers, and the ability to control what we can see and do on the web. Earlier this year, {{ page.pronoun.subject }} <a href="https://www.theverge.com/2017/3/29/15100620/congress-fcc-isp-web-browsing-privacy-fire-sale" target="_blank">{{ page.legislation.verb }}</a> a disturbingly sleazy bill to let Internet providers to sell our web browsing history to advertisers without our permission. Now, {{ page.pronoun.subject }}’s <a href="{{ page.supporting.link }}" target="_blank">supporting</a> the Federal Communication Commission (FCC) plan to kill online free speech by <a href="https://www.newsmax.com/DavidGoodfriend/comcast-fcc-pai/2015/04/26/id/786478/" target="_blank">letting Internet providers</a> block or slow down entire websites while speeding up their own content. Add your name to tell {{ page.pronoun.possessive }} {{ page.pronoun.subject }} won’t get away with it.
+
     {{ content }}
   </main>
   {% include footer.html %}
