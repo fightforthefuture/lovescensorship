@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: politician
 domain: https://repgregwalden.info
 politician:
   name: Greg Walden

@@ -1,10 +1,12 @@
-{% capture title %}{{ page.politician.name }}{{ site.title }}{% endcapture %}
-{% capture share_title %}{{ page.politician.name }}{{ site.share_title }}{% endcapture %}
-{% capture share_description %}{{ page.pronoun.subject | capitalize }}{{ site.share_description }}{% endcapture %}
-
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+
+{% if page.layout == 'politician' %}
+
+{% capture title %}{{ site.title | prepend: page.politician.name }}{% endcapture %}
+{% capture share_title %}{{ site.share_title | prepend: page.politician.name }}{% endcapture %}
+{% capture share_description %}{{ page.pronoun.subject | capitalize }}{{ site.share_description }}{% endcapture %}
 
 <title>{{ title }}</title>
 <meta name="description" content="{{ share_title }}">
@@ -28,6 +30,13 @@
 <meta name="twitter:image:src" content="{{ page.politician.image | prepend: page.domain }}" />
 <meta name="twitter:domain" content="{{ page.domain | remove:'http://' | remove:'https://' }}" />
 <meta name="twitter:account_id" content="{{ site.author.twitter_id }}" />
+
+{% else %}
+
+<title>{{ page.title }}</title>
+<meta name="description" content="{{ page.description }}">
+
+{% endif %}
 
 <link rel="shortcut icon" href="/favicon.ico">
 

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: politician
 domain: https://marshablackburn.info
 politician:
   name: Marsha Blackburn
