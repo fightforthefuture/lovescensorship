@@ -1,16 +1,18 @@
 <div id="{{ include.id }}" class="overlay fade invisible hidden">
-  <div class="cell">
-    <section class="modal">
-      <main>
-        <h2>{{ include.header }}</h2>
-        <p>{{ include.body }}</p>
-      </main>
-      <footer>
-        <div class="share">
-          {% include share.html %}
-          {% include donate.html %}
-        </div>
-      </footer>
-    </section>
+  <div class="wrapper">
+    <div class="cell">
+      <section class="modal">
+        <main>
+          <h2>{{ include.header }}</h2>
+          <p>{{ include.body }}</p>
+        </main>
+        <footer>
+          <div class="share">
+            {% include share.html %}
+            {% include donate.html %}
+          </div>
+        </footer>
+      </section>
+    </div>
   </div>
 </div>
