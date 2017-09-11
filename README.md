@@ -2,20 +2,11 @@
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/fightforthefuture/lovescensorship)
 
-This project uses [NGINX](https://www.nginx.com/) in front of [Jekyll](https://jekyllrb.com/) to serve any number of single-page static sites (with content configurable in [Markdown](https://daringfireball.net/projects/markdown/syntax)) from one or more shared templates.
+This project uses [NGINX](https://www.nginx.com/) in front of [Jekyll](https://jekyllrb.com/) to serve any number of single-page static sites from one or more shared templates.
 
-# Adding new sites
+# Contributing
 
-- Create a new file in `_posts/` following the `0001-01-01-{DOMAIN}.md` pattern on a new `git` branch, then open a pull request.
-- Wait a few moments for Travis CI to run. If an error is displayed, the Jekyll build likely failed - click the Travis link in the pull request for more details.
-- If review apps are enabled for a Heroku Pipeline connected to this repository, a temporary app will be created so you can preview the content of your pull request. Your site should be visible by appending `{DOMAIN}` to the `View deployment` link in the pull request like `https://{REVIEW_APP}.herokuapp.com/{DOMAIN}`.
-- If you're configuring a new domain name instead of a subdomain, follow [the steps below](#adding-new-domain-names).
-- When everything looks good, merge the pull request, and your changes should be deployed automatically!
-
-# Adding new domain names
-
-- In the Heroku dashboard, navigate to this app, open the `Settings` tab add two new custom domains under `Domains and certificates` - the naked apex domain like `example.com` and `www.example.com`. NGINX will 301 redirect all traffic to HTTPS and the naked apex domain. Note that Heroku's automatically managed SSL certificates [won't work with CloudFlare](https://kb.heroku.com/how-can-i-use-automated-certificate-management-with-cloudflare).
-- In your DNS provider, create a `CNAME` record for the apex domain and `www` subdomain and point each at the respective `DNS Target` shown in Heroku.
+See [CONTRIBUTING.md](CONTRIBUTING.md)
 
 # Notes
 - You can use a [wildcard domain](https://devcenter.heroku.com/articles/custom-domains#add-a-wildcard-domain) and tweak the NGINX configuration to serve sites on subdomains instead.
