@@ -9,8 +9,8 @@ pronoun:
   subject: she
   object: her
 taken:
-  link: http://www.vocativ.com/415350/house-rep-pushing-to-set-back-online-privacy-rakes-in-industry-funds/
-amount: $700,000
+  link: https://docs.google.com/spreadsheets/d/1fcwRiFxMv-665MWXJ2oShU0I_rMe1uUjhw-rYV4FOJ8
+  amount: nearly $600,000
 legislation: 
   verb: sponsored
 supporting:

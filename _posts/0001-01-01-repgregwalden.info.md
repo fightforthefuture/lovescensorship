@@ -9,8 +9,8 @@ pronoun:
   subject: he
   object: him
 taken:
-  link: https://www.opensecrets.org/members-of-congress/contributors?cid=N00007690&cycle=CAREER&type=I
-amount: $400,000
+  link: https://docs.google.com/spreadsheets/d/1QND-DOtoQkmaRBjzf2r7DqV9J-3rYKKg7Wx4SNtgCZI
+  amount: over $1.3 million
 legislation: 
   verb: voted for
 supporting:
