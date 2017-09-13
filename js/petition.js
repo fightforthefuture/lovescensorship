@@ -24,7 +24,9 @@
 
   function onError(e) {
     flash('There was an issue submitting the form, please try again.');
-    // TODO: Report XHR errors or HTTP error codes to Sentry
+
+    // Report XHR errors or HTTP error codes to Sentry
+    if (typeof Raven !== 'undefined') Raven.captureException(e);
   }
 
   function onLoad(e) {
