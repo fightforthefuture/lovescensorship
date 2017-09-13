@@ -32,7 +32,8 @@
       thanks.classList.remove('hidden');
       thanks.classList.remove('invisible');
 
-      // TODO: Add event listeners to close modal
+      // Track successful form submissions
+      fbq('track', 'CompleteRegistration');
     } else {
       onError(e);
     }
