@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/fightforthefuture/lovescensorship.svg?token=Phdq58g7NsfstW6gyeYW&branch=master)](https://travis-ci.com/fightforthefuture/lovescensorship)
+[![Build Status](https://travis-ci.org/fightforthefuture/lovescensorship.svg?branch=master)](https://travis-ci.org/fightforthefuture/lovescensorship)
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/fightforthefuture/lovescensorship)
 
